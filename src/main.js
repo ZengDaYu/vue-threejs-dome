@@ -1,0 +1,20 @@
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+
+import * as VueThreejs from 'three'
+import echarts from 'echarts'
+
+Vue.prototype.$echarts = echarts
+import '@/globalComponent'
+
+Vue.use(VueThreejs)
+
+Vue.config.productionTip = false
+
+new Vue({
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app')
